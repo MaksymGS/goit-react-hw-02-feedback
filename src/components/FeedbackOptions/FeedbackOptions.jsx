@@ -2,8 +2,7 @@ import React from 'react';
 import { Button, ButtonWrap } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  console.log(options);
-  return (
+    return (
     <ButtonWrap>
       {options.map((item, idx) => (
         <Button
