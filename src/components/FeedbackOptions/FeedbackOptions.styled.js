@@ -19,19 +19,16 @@ export const Button = styled.button`
   padding: 10px 20px;
 
   &:first-child {
-    &:hover,
-    &:focus {
+    &:hover{
       background-color: green;
     }
   }
   &:last-child {
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: red;
     }
 }
-&:hover,
-&:focus {
+&:hover {
   background-color: #16437e;
 }
 `;

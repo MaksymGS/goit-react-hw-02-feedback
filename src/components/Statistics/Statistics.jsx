@@ -1,5 +1,6 @@
 import React from 'react';
 import { List, ListItem } from './Statistics.styled';
+import { Notification } from './Notification/Notification';
 
 export const Statistics = ({
   good,
@@ -14,8 +15,14 @@ export const Statistics = ({
       <ListItem>Good: {good}</ListItem>
       <ListItem>Neutral: {neutral}</ListItem>
       <ListItem>Bad: {bad}</ListItem>
-      <ListItem>Total: {total}</ListItem>
-      <ListItem>Positive feedback: {positivePercentage}%</ListItem>
+      {total > 0 ? (
+        <>
+          <ListItem>Total: {total}</ListItem>
+          <ListItem>Positive feedback: {positivePercentage}%</ListItem>
+        </>
+      ) : (
+        <Notification message="There is no feedback" />
+      )}
     </List>
   );
 };
